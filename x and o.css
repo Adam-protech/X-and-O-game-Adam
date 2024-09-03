@@ -1,0 +1,79 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+    margin: 0;
+    background-color: gold;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.8s ease;
+    transition: 5s;
+        border-left: 8px solid red;
+        border-top: 8px solid green;
+        border-right: 8px solid pink;
+        border-bottom: 8px solid indigo;
+}
+
+#game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 3px;
+    transition: 5s;
+        background-color: silver;
+        border-left: 8px solid purple;
+        border-top: 8px solid green;
+        border-right: 8px solid dimgray;
+        border-bottom: 8px solid blue;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    border: 2px solid greenyellow;
+    background-color: #eee;
+    box-shadow: -8px -8px 15px rgb(55, 55, 55, 0.7)
+    /* transition: background-color 0.3s ease; */
+}
+
+.cell.X {
+    background: linear-gradient(45deg, green, indigo); /* Gradient for player X */
+}
+
+.cell.O {
+    background: linear-gradient(45deg, violet, #B6E1FF); /* Gradient for player O */
+}
+
+#restart {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: brown;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#restart:hover {
+        transition: 5s;
+        background-color: blueviolet;
+        border-left: 8px solid purple;
+        border-top: 8px solid green;
+        border-right: 8px solid orange;
+        border-bottom: 8px solid blue;
+        width: 20%;
+}
+
+body.winner {
+    background: linear-gradient(45deg, #FFD700, #FF8C00); /* Gradient for winning */
+    color: #fff;
+}
